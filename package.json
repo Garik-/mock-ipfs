@@ -1,0 +1,66 @@
+{
+    "name": "mock-ipfs",
+    "version": "0.1.0",
+    "description": "IPFS lib without IPFS :) just libp2p pubsub",
+    "leadMaintainer": "Alan Shaw <alan@tableflip.io>",
+    "main": "src/index.js",
+    "engines": {
+      "node": ">=10.0.0",
+      "npm": ">=6.0.0"
+    },
+    "scripts": {
+      "lint": "aegir lint",
+      "build": "aegir build",
+      "test": "aegir test -t node --timeout=10000",
+      "release": "aegir release -t node -t browser",
+      "release-minor": "aegir release --type minor -t node",
+      "release-major": "aegir release --type major -t node",
+      "coverage": "aegir coverage",
+      "coverage-publish": "aegir-coverage publish",
+      "dep-check": "npx dependency-check package.json './test/**/*.js' './src/**/*.js'"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Garik-/mock-ipfs.git"
+    },
+    "keywords": [
+      "IPFS",
+      "libp2p",
+      "pubsub"
+    ],
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/Garik-/mock-ipfs/issues"
+    },
+    "homepage": "https://github.com/Garik-/mock-ipfs/#readme",
+    "devDependencies": {
+      "aegir": "^17.0.1",
+      "chai": "^4.2.0",
+      "dirty-chai": "^2.0.1",
+      "hat": "0.0.3"
+    },
+    "dependencies": {
+      "@nodeutils/defaults-deep": "^1.1.0",
+      "async": "^2.6.1",
+      "debug": "^4.1.0",
+      "libp2p": "~0.24.1",
+      "libp2p-bootstrap": "~0.9.3",
+      "peer-book": "~0.8.0",
+      "peer-id": "~0.12.0",
+      "peer-info": "~0.14.1",
+      "promisify-es6": "^1.0.3",
+      "fsm-event": "^2.1.0",
+      "lodash": "^4.17.11",
+      "err-code": "^1.1.2",
+      "libp2p-tcp": "~0.13.0",
+      "libp2p-mdns": "~0.12.0",
+      "libp2p-websocket-star": "~0.9.0",
+      "libp2p-websockets": "~0.12.0",
+      "libp2p-kad-dht": "~0.12.1",
+      "libp2p-mplex": "~0.8.4",
+      "libp2p-secio": "~0.10.1"
+    },
+    "contributors": [
+      "Garik Djan <garik.djan@gmail.com>"
+    ]
+  }
