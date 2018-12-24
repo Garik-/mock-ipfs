@@ -13,7 +13,26 @@ module.exports = function libp2p (self) {
         peerBook: self._peerInfoBook,
         peerInfo: self._peerInfo,
         config: {
+          peerDiscovery: {
+            mdns: {
+              enabled: true
+            },
+            webRTCStar: {
+              enabled: true
+            },
+            bootstrap: {
+              list: []
+            }
+          },
+          relay: {
+            enabled: false,
+            hop: {
+              enabled: false,
+              active: false
+            }
+          },
           EXPERIMENTAL: {
+            dht: false,
             pubsub: true
           }
         }
